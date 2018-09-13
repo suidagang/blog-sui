@@ -1,0 +1,112 @@
+//公共样式
+body,p,a,h1,h2,h3,h4,h5,header,nav,aside,figcaption,article,footer,section,figure,img,input,button,ul,li,dl,dt,dd,ol{
+    margin: 0;padding: 0;
+    font-family: "Microsoft YaHei",'微软雅黑', 'Helvetica Neue', "STXiHei", 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+select,input{
+    vertical-align: middle;
+}
+img,input{border:0;}
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+ul,li{list-style: none;}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+
+//文字打字效果
+.vue-typer {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+    color: purple;
+}
+
+.vue-typer .custom.char.typed {
+    color: mediumvioletred!important;
+}
+.vue-typer .custom.char.selected {
+    //color: purple;
+    //background-color: transparent;
+    //text-decoration: line-through;
+}
+
+.vue-typer .custom.caret {
+    display: none;
+}
+//文字打字效果结束
+
+
+//水波纹效果
+/*解决双击不选中事件*/
+.ripple{
+    -moz-user-select:none; /*火狐*/
+    -webkit-user-select:none; /*webkit浏览器*/
+    -ms-user-select:none; /*IE10*/
+    user-select:none;
+}
+.ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(circle, #666 10%, transparent 10.01%)  50% 50% no-repeat;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform 1s, opacity .9s;
+}
+
+.ripple:active:after {
+    transform: scale(0, 0);
+    opacity: .6;
+    transition: 0s;
+}
+//水波纹效果结束
+
+//每个页面的盒子样式及大小
+.com-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(skyblue, #fff,#fff);
+    background-size: cover;
+    color: #000;
+}
+.com-min-box{
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(skyblue,#fff);
+    background-size: cover;
+    color: #000;
+    padding-bottom: 130px;
+}
+//每个页面的盒子样式及大小结束
+
+//分页位置
+.com-page{
+    position: absolute;
+    bottom:50px;
+    left:50%;
+    margin-left: -207px;
+}
+//分页结束
+
+#nprogress .bar {
+    background: orangered !important; //自定义颜色
+}
+

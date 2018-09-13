@@ -1,0 +1,28 @@
+{
+  "name": "sui_blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --port 8908",
+    "build": "vue-cli-service build",
+    "development": "vue-cli-service build --mode development"
+  },
+  "dependencies": {
+    "element-ui": "^2.4.6",
+    "gsap": "^2.0.2",
+    "nprogress": "^0.2.0",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vue-typer": "^1.2.0",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0",
+    "@vue/cli-service": "^3.0.0",
+    "babel-plugin-component": "^1.1.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-cli-plugin-element": "^1.0.0",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
