@@ -50,7 +50,8 @@
 <style scoped>
     .goTop{
         position: fixed;
-        right: 20px;
+        right: 50%;
+        margin-right: -660px;
         bottom: 20px;
         width: 150px;
         height: 150px;
