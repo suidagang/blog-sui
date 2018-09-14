@@ -12,13 +12,28 @@ NProgress.configure({ showSpinner: false })// NProgress Configuration
 
 //去除覆盖浏览器默认样式
 import "./less/framework.less";
+//文章列表页样式
+import "./less/writeList.less";
+
 Vue.config.productionTip = false;
 
+
+
+
+
 router.beforeEach((to, from, next) => {
+  store.commit('updateLoadingStatus', {isLoading: true})
   NProgress.start(); // 开始进度条
   next();
   NProgress.done();
+
 });
+
+router.afterEach(function (to) {
+  setTimeout(function(){
+    store.commit('updateLoadingStatus', {isLoading: false})
+  },300)
+})
 
 new Vue({
   router,

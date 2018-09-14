@@ -27,11 +27,11 @@ html,body{
 //文字打字效果
 .vue-typer {
     font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
-    color: purple;
+    color: #220c80;
 }
 
 .vue-typer .custom.char.typed {
-    color: mediumvioletred!important;
+    color: #220c80!important;
 }
 .vue-typer .custom.char.selected {
     //color: purple;
@@ -110,3 +110,23 @@ html,body{
     background: orangered !important; //自定义颜色
 }
 
+
+//loading自定义动画图片
+.el-loading-spinner .circular{
+    width:42px;
+    height:42px;
+    animation: loading-rotate 2s linear infinite;
+    display: none;
+}
+.el-loading-spinner{
+    background: url("../assets/img/mao.gif") no-repeat;
+    background-size: 200px 190px;
+    width: 200px;
+    height:190px;
+    position: relative;
+    top:50%;
+    left:50%;
+    margin-left: -100px;
+    margin-top: -95px;
+}
+//loading结束
