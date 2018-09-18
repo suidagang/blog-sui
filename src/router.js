@@ -12,6 +12,7 @@ const NodeIndex = () => import(/* webpackChunkName: "group-node" */ './component
 const SvgIndex = () => import(/* webpackChunkName: "group-svg" */ './components/SVG/SvgIndex.vue')
 const VueIndex = () => import(/* webpackChunkName: "group-vue" */ './components/VUE2.0/VueIndex.vue')
 const VuePluginIndex = () => import(/* webpackChunkName: "group-vueplugin" */ './components/VUEPLUGIN/VuePluginIndex.vue')
+const VuePageOne = () => import(/* webpackChunkName: "group-vue" */ './components/VUE2.0/SUBPAGE/VuePageOne.vue')
 //import Home from './views/Home.vue'
 
 Vue.use(Router)
@@ -78,6 +79,10 @@ export default new Router({
       path: '/VuePluginIndex',
       name: 'vue插件文章首页',
       component: VuePluginIndex
-    }
+    },{
+      path: '/VuePageOne',
+      name: 'vue-router效果',
+      component: VuePageOne
+    },
   ]
 })

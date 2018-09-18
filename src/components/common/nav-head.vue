@@ -1,6 +1,7 @@
 <template>
     <div class="nav-head">
-        <el-button class="back-btn" @click="goWriteList()">返回</el-button>
+        <el-button class="back-btn" @click="back()">返回</el-button>
+        <el-button class="home-btn" @click="list()">列表主页</el-button>
         <vue-typer class="head" :repeat='1' erase-style='backspace'   :text=headTitle></vue-typer>
     </div>
 </template>
@@ -34,9 +35,12 @@
             VueTyper
         },
         methods:{
-            goWriteList(){
-                this.$router.push("/WriteList")
+            back () {
+                this.$emit('back');
             },
+            list () {
+                this.$emit('home');
+            }
         },
         watch: {
 
@@ -50,6 +54,12 @@
         position: absolute;
         top:10px;
         left:30px;
+        z-index: 99;
+    }
+    .home-btn{
+        position: absolute;
+        top:10px;
+        left:110px;
         z-index: 99;
     }
 

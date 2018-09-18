@@ -1,6 +1,6 @@
 <template>
     <div class="com-box" >
-        <nav-head :head-title="navHeadText"></nav-head>
+        <nav-head :head-title="navHeadText" @back="back()" @home="home"></nav-head>
     </div>
 </template>
 
@@ -27,9 +27,12 @@
             navHead
         },
         methods:{
-            goWriteList(){
+            back(){
                 this.$router.push("/WriteList")
             },
+            home(){
+                this.$router.push("/WriteList")
+            }
         },
         watch: {
 

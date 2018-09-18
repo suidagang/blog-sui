@@ -1,7 +1,7 @@
 <template>
     <div class="com-min-box" >
         <go-top></go-top>
-        <nav-head :head-title="navHeadText"></nav-head>
+        <nav-head :head-title="navHeadText" @back="back()" @home="home"></nav-head>
 
         <div class="write-list-box">
             <div class="every-write-list">
@@ -61,7 +61,10 @@
             goTop
         },
         methods:{
-            goWriteList(){
+            back(){
+                this.$router.push("/WriteList")
+            },
+            home(){
                 this.$router.push("/WriteList")
             },
         },
