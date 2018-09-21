@@ -1,64 +1,68 @@
 <template>
     <div class="com-box" >
-        <el-button class="back-btn" @click="goHome()">主页</el-button>
-        <div class="label">
-            <el-row  :gutter="12">
-                <el-col :span="4" >
-                    <el-card shadow="hover" @click.native="goSvg()" >
-                        SVG
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goGreensock()">
-                        GreenSock
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goVue()">
-                        vue2.0
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goHtml()">
-                        html
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goJs()">
-                        js
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goCss()">
-                        css
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goNode()">
-                        node
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goExpress()">
-                        express
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goMongodb()">
-                        mongodb
-                    </el-card>
-                </el-col>
-                <el-col :span="4">
-                    <el-card shadow="hover" @click.native="goVueplugin()">
-                        vue插件
-                    </el-card>
-                </el-col>
-            </el-row>
+        <rain></rain>
+        <div class="home-box">
+            <el-button class="back-btn" @click="goHome()">主页</el-button>
+            <div class="label">
+                <el-row  :gutter="12">
+                    <el-col :span="4" >
+                        <el-card shadow="hover" @click.native="goSvg()" >
+                            SVG
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goGreensock()">
+                            GreenSock
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goVue()">
+                            vue2.0
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goHtml()">
+                            html
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goJs()">
+                            js
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goCss()">
+                            css
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goNode()">
+                            node
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goExpress()">
+                            express
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goMongodb()">
+                            mongodb
+                        </el-card>
+                    </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goVueplugin()">
+                            vue插件
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+    import rain from "./../components/common/Rain.vue";
     export default {
         name: 'write-list',
         data () {
@@ -77,7 +81,7 @@
 
         },
         components: {
-
+            rain
         },
         methods:{
             goHome(){
@@ -135,5 +139,13 @@
     .el-col{
         margin-bottom: 10px;
         cursor: pointer;
+    }
+    .home-box{
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index: 222;
     }
 </style>

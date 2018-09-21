@@ -1,23 +1,27 @@
 <template>
     <div class="com-box" >
-        <div class="blog-head">
-            <vue-typer class="nav-text" :repeat='1' erase-style='backspace'   text='眭刚的博客'></vue-typer>
+        <rain></rain>
+        <div class="home-box">
+            <div class="blog-head">
+                <vue-typer class="nav-text" :repeat='1' erase-style='backspace'   text='眭刚的博客'></vue-typer>
+            </div>
+            <div class="svg-container" id="boxContainer">
+                <svg id="boxLoader" width="70px" height="70px"  preserveAspectRatio="none">
+                    <rect x="0" fill="#00EE00" width="70px" height="70px" />
+                </svg>
+                <svg id="base" width="210px" height="210px" viewBox="0 0 105 105" preserveAspectRatio="none">
+                    <line stroke-width="1.5" fill="none" stroke="purple" stroke-miterlimit="10" x1="0" y1="52.5" x2="105" y2="52.5" />
+                </svg>
+            </div>
+            <el-button type="primary" class="sui-btn ripple" @click="goList()">进入</el-button>
         </div>
-        <div class="svg-container" id="boxContainer">
-            <svg id="boxLoader" width="70px" height="70px"  preserveAspectRatio="none">
-                <rect x="0" fill="#00EE00" width="70px" height="70px" />
-            </svg>
-            <svg id="base" width="210px" height="210px" viewBox="0 0 105 105" preserveAspectRatio="none">
-                <line stroke-width="1.5" fill="none" stroke="purple" stroke-miterlimit="10" x1="0" y1="52.5" x2="105" y2="52.5" />
-            </svg>
-        </div>
-        <el-button type="primary" class="sui-btn ripple" @click="goList()">进入</el-button>
     </div>
 </template>
 
 <script>
     import TweenLite from "gsap";
-    import { VueTyper } from 'vue-typer'
+    import { VueTyper } from 'vue-typer';
+    import rain from "./../components/common/Rain.vue";
     export default {
         name: 'home',
         data () {
@@ -30,13 +34,16 @@
 
         },
         mounted () {
+            const sm3 = require('sm3');
+            console.log(sm3("123456"));
             this.startSVG();
         },
         computed: {
 
         },
         components: {
-            VueTyper
+            VueTyper,
+            rain
         },
         methods:{
             startSVG(){
@@ -136,6 +143,7 @@
         margin-top: 30px;
         width:100%;
         overflow: hidden;
+        z-index: 999;
     }
     .nav-text{
         font-family: '微软雅黑', 'Helvetica Neue', "STXiHei", 'Source Sans Pro', Helvetica, Arial, sans-serif;
@@ -143,5 +151,13 @@
         font-weight: bold;
         height:60px;
         line-height: 60px;
+    }
+    .home-box{
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index: 222;
     }
 </style>

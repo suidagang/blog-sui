@@ -17,7 +17,10 @@ import "./less/writeList.less";
 
 Vue.config.productionTip = false;
 
+// highlight.js代码高亮指令
+import Highlight from './assets/utils/hignlight';
 
+Vue.use(Highlight);
 
 
 
