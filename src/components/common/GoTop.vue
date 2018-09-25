@@ -28,7 +28,7 @@
                 //动画开始
                 timer=requestAnimationFrame(function fn(){
                     if(that.scrollTop>0){
-                        that.scrollTop-=20;
+                        that.scrollTop-=80;
                         document.body.scrollTop = document.documentElement.scrollTop = that.scrollTop;
                         timer=requestAnimationFrame(fn)
                     }else {
