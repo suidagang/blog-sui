@@ -88,34 +88,34 @@
                 this.$router.push("/")
             },
             goSvg(){
-                this.$router.push("/SvgIndex")
+                this.$router.push("/Svg/SvgIndex")
             },
             goGreensock(){
-                this.$router.push("/GreenSockIndex")
+                this.$router.push("/GreenSock/GreenSockIndex")
             },
             goVue(){
-                this.$router.push("/VueIndex")
+                this.$router.push("/vue/VueIndex")
             },
             goHtml(){
-                this.$router.push("/HtmlIndex")
+                this.$router.push("/Html/HtmlIndex")
             },
             goJs(){
-                this.$router.push("/JsIndex")
+                this.$router.push("/Js/JsIndex")
             },
             goCss(){
-                this.$router.push("/CssIndex")
+                this.$router.push("/Css/CssIndex")
             },
             goNode(){
-                this.$router.push("/NodeIndex")
+                this.$router.push("/Node/NodeIndex")
             },
             goExpress(){
-                this.$router.push("/ExpressIndex")
+                this.$router.push("/Express/ExpressIndex")
             },
             goMongodb(){
-                this.$router.push("/MongodbIndex")
+                this.$router.push("/Mongodb/MongodbIndex")
             },
             goVueplugin(){
-                this.$router.push("/VuePluginIndex")
+                this.$router.push("/VuePlugin/VuePluginIndex")
             }
         },
         watch: {

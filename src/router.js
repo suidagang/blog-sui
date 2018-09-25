@@ -2,18 +2,40 @@ import Vue from 'vue'
 import Router from 'vue-router'
 const Home = () => import(/* webpackChunkName: "group-home" */ './views/Home.vue')
 const WriteList = () => import(/* webpackChunkName: "group-list" */ './views/WriteList.vue')
-const CssIndex = () => import(/* webpackChunkName: "group-css" */ './components/CSS/CssIndex.vue')
-const ExpressIndex = () => import(/* webpackChunkName: "group-express" */ './components/EXPRESS/ExpressIndex.vue')
-const GreenSockIndex = () => import(/* webpackChunkName: "group-greensock" */ './components/GREENSOCK/GreenSockIndex.vue')
-const HtmlIndex = () => import(/* webpackChunkName: "group-html" */ './components/HTML/HtmlIndex.vue')
-const JsIndex = () => import(/* webpackChunkName: "group-js" */ './components/JS/JsIndex.vue')
-const MongodbIndex = () => import(/* webpackChunkName: "group-mongodb" */ './components/MONGODB/MongodbIndex.vue')
-const NodeIndex = () => import(/* webpackChunkName: "group-node" */ './components/NODE/NodeIndex.vue')
-const SvgIndex = () => import(/* webpackChunkName: "group-svg" */ './components/SVG/SvgIndex.vue')
+
+//VUE2.0相关文章
 const VueIndex = () => import(/* webpackChunkName: "group-vue" */ './components/VUE2.0/VueIndex.vue')
-const VuePluginIndex = () => import(/* webpackChunkName: "group-vueplugin" */ './components/VUEPLUGIN/VuePluginIndex.vue')
 const VuePageOne = () => import(/* webpackChunkName: "group-vue" */ './components/VUE2.0/SUBPAGE/VuePageOne.vue')
-//import Home from './views/Home.vue'
+const VuePageTwo = () => import(/* webpackChunkName: "group-vue" */ './components/VUE2.0/SUBPAGE/VuePageTwo.vue')
+const vue = () => import(/* webpackChunkName: "group-vue" */ './components/VUE2.0/VueCom.vue')
+//SVG相关文章
+const Svg = () => import(/* webpackChunkName: "group-svg" */ './components/SVG/Svg.vue')
+const SvgIndex = () => import(/* webpackChunkName: "group-svg" */ './components/SVG/SvgIndex.vue')
+//greensock相关文章
+const GreenSock = () => import(/* webpackChunkName: "group-greensock" */ './components/GREENSOCK/GreenSock.vue')
+const GreenSockIndex = () => import(/* webpackChunkName: "group-greensock" */ './components/GREENSOCK/GreenSockIndex.vue')
+//html相关文章
+const Html = () => import(/* webpackChunkName: "group-html" */ './components/HTML/Html.vue')
+const HtmlIndex = () => import(/* webpackChunkName: "group-html" */ './components/HTML/HtmlIndex.vue')
+//js相关文章
+const Js = () => import(/* webpackChunkName: "group-js" */ './components/JS/Js.vue')
+const JsIndex = () => import(/* webpackChunkName: "group-js" */ './components/JS/JsIndex.vue')
+//css相关文章
+const Css = () => import(/* webpackChunkName: "group-css" */ './components/CSS/Css.vue')
+const CssIndex = () => import(/* webpackChunkName: "group-css" */ './components/CSS/CssIndex.vue')
+//node相关文章
+const Node = () => import(/* webpackChunkName: "group-node" */ './components/NODE/Node.vue')
+const NodeIndex = () => import(/* webpackChunkName: "group-node" */ './components/NODE/NodeIndex.vue')
+//express相关文章
+const Express = () => import(/* webpackChunkName: "group-express" */ './components/EXPRESS/Express.vue')
+const ExpressIndex = () => import(/* webpackChunkName: "group-express" */ './components/EXPRESS/ExpressIndex.vue')
+//mongodb相关文章
+const Mongodb = () => import(/* webpackChunkName: "group-mongodb" */ './components/MONGODB/Mongodb.vue')
+const MongodbIndex = () => import(/* webpackChunkName: "group-mongodb" */ './components/MONGODB/MongodbIndex.vue')
+//vue插件相关文章
+const VuePlugin = () => import(/* webpackChunkName: "group-vueplugin" */ './components/VUEPLUGIN/VuePlugin.vue')
+const VuePluginIndex = () => import(/* webpackChunkName: "group-vueplugin" */ './components/VUEPLUGIN/VuePluginIndex.vue')
+
 
 Vue.use(Router)
 
@@ -31,58 +53,133 @@ export default new Router({
       component: WriteList
     },
     {
-      path: '/CssIndex',
-      name: 'CSS文章首页',
-      component: CssIndex
+      path: '/Mongodb',
+      name: 'Mongodb专栏公共页',
+      component: Mongodb,
+      children: [
+        {
+          path: 'MongodbIndex',
+          name: 'mongodb文章首页',
+          component: MongodbIndex
+        },
+      ]
     },
     {
-      path: '/ExpressIndex',
-      name: 'express文章首页',
-      component: ExpressIndex
+      path: '/VuePlugin',
+      name: 'VuePlugin专栏公共页',
+      component: VuePlugin,
+      children: [
+        {
+          path: 'VuePluginIndex',
+          name: 'vue插件文章首页',
+          component: VuePluginIndex
+        },
+      ]
     },
     {
-      path: '/GreenSockIndex',
-      name: 'GreenSock文章首页',
-      component: GreenSockIndex
+      path: '/Express',
+      name: 'express专栏公共页',
+      component: Express,
+      children: [
+        {
+          path: 'ExpressIndex',
+          name: 'express文章首页',
+          component: ExpressIndex
+        },
+      ]
     },
     {
-      path: '/HtmlIndex',
-      name: 'html文章首页',
-      component: HtmlIndex
+      path: '/Node',
+      name: 'node专栏公共页',
+      component: Node,
+      children: [
+        {
+          path: 'NodeIndex',
+          name: 'node文章首页',
+          component: NodeIndex
+        },
+      ]
     },
     {
-      path: '/JsIndex',
-      name: 'js文章首页',
-      component: JsIndex
+      path: '/Html',
+      name: 'html专栏公共页',
+      component: Html,
+      children: [
+        {
+          path: 'HtmlIndex',
+          name: 'html文章首页',
+          component: HtmlIndex
+        },
+      ]
     },
     {
-      path: '/MongodbIndex',
-      name: 'mongodb文章首页',
-      component: MongodbIndex
+      path: '/Js',
+      name: 'js专栏公共页',
+      component: Js,
+      children: [
+        {
+          path: 'JsIndex',
+          name: 'js文章首页',
+          component: JsIndex
+        },
+      ]
     },
     {
-      path: '/NodeIndex',
-      name: 'node文章首页',
-      component: NodeIndex
+      path: '/Css',
+      name: 'css专栏公共页',
+      component: Css,
+      children: [
+        {
+          path: 'CssIndex',
+          name: 'CSS文章首页',
+          component: CssIndex
+        },
+      ]
     },
     {
-      path: '/SvgIndex',
-      name: 'svg文章首页',
-      component: SvgIndex
+      path: '/Svg',
+      name: 'SVG专栏公共页',
+      component: Svg,
+      children: [
+        {
+          path: 'SvgIndex',
+          name: 'svg文章首页',
+          component: SvgIndex
+        },
+      ]
     },
     {
-      path: '/VueIndex',
-      name: 'vue文章首页',
-      component: VueIndex
+      path: '/GreenSock',
+      name: 'GreenSock专栏公共页',
+      component: GreenSock,
+      children: [
+        {
+          path: 'GreenSockIndex',
+          name: 'GreenSock文章首页',
+          component: GreenSockIndex
+        },
+      ]
     },
     {
-      path: '/VuePluginIndex',
-      name: 'vue插件文章首页',
-      component: VuePluginIndex
-    },{
-      path: '/VuePageOne',
-      name: 'vue-router效果',
-      component: VuePageOne
-    },
+      path: '/vue',
+      name: 'vue专栏公共页',
+      component: vue,
+      children: [
+        {
+          path: 'VueIndex',
+          name: 'vue文章首页',
+          component: VueIndex
+        },
+        {
+          path: 'VuePageOne',
+          name: 'vue-router效果',
+          component: VuePageOne
+        },{
+          path: 'VuePageTwo',
+          name: 'vue单页面首次加载慢',
+          component: VuePageTwo
+        }
+      ]
+    }
   ]
 })
