@@ -14,13 +14,13 @@
                 <h2 class="h2-title">路由前进和后退的动画效果一样</h2>
                 <p class="page-p-two-index">
                     可以参考vue官方文档:
-                    <a class="a-url" href="https://cn.vuejs.org/v2/guide/transitions.html">vue过渡、动画。</a>
+                    <a class="a-url" href="https://cn.vuejs.org/v2/guide/transitions.html" target="_blank">vue过渡、动画。</a>
 
                 </p>
                 <h2 class="h3-title">elment UI 框架 实现路由前进和后退动画一样的效果</h2>
                 <p>
                     可以参考element文档:
-                    <a class="a-url" href="http://element-cn.eleme.io/#/zh-CN/component/loading">loading加载</a>
+                    <a class="a-url" href="http://element-cn.eleme.io/#/zh-CN/component/loading" target="_blank">loading加载</a>
                     这里我想讲一下关于element loading 修改动画的方案,首先在app.vue的文件做如下修改：
                 </p>
                 <pre v-highlightA>
@@ -59,8 +59,8 @@
                 </pre>
                 <h2 class="h3-title">vue过渡效果实现 路由前进和后退的动画效果一样</h2>
                 <p class="page-p-two-index">可以参考:
-                    <a class="a-url" href="https://cn.vuejs.org/v2/guide/transitions.html">官方文档的过渡效果。</a>
-                    首先在app.vue文件中修改,可以参考:<a class="a-url" href="http://www.css88.com/book/css/properties/index.htm">css3的动画效果</a>
+                    <a class="a-url" href="https://cn.vuejs.org/v2/guide/transitions.html" target="_blank">官方文档的过渡效果。</a>
+                    首先在app.vue文件中修改,可以参考:<a class="a-url" href="http://www.css88.com/book/css/properties/index.htm" target="_blank">css3的动画效果</a>
                 </p>
                              <pre v-highlightA>
     <code >
@@ -102,7 +102,7 @@
         }
     </code>
                 </pre>
-                    可以参考博客:<a class="a-url" href="https://blog.csdn.net/qq_33236453/article/details/79110485">前进、回退 不一样的效果。</a>
+                    可以参考博客:<a class="a-url" href="https://blog.csdn.net/qq_33236453/article/details/79110485" target="_blank">前进、回退 不一样的效果。</a>
                 </p>
             </div>
         </div>
@@ -124,7 +124,8 @@
                 twoRouter:"/vue/VueIndex",
                 pageTitle:"vue-router 效果",
                 pageDate:"2018/9/18",
-                input:''
+                input:'',
+                test:""
 
             }
         },
