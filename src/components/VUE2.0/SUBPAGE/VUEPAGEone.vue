@@ -124,9 +124,7 @@
                 twoRouter:"/vue/VueIndex",
                 pageTitle:"vue-router 效果",
                 pageDate:"2018/9/18",
-                input:'',
-                test:""
-
+                input:''
             }
         },
         created () {
