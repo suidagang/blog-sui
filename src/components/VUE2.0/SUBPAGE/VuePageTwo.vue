@@ -18,7 +18,7 @@
                 <h2 class="h3-title">路由懒加载来解决app.js太大的问题</h2>
                 <p>
                     可以参考vue-router文档:
-                    <a class="a-url" href="https://router.vuejs.org/zh/guide/advanced/lazy-loading.html">vue-router懒加载,</a>
+                    <a class="a-url" href="https://router.vuejs.org/zh/guide/advanced/lazy-loading.html" target="_blank">vue-router懒加载,</a>
                     修改方案,首先在rouetr.js的文件做如下修改：
                 </p>
                 <pre v-highlightA>
@@ -316,6 +316,31 @@
     </code>
                 </pre>
                 然后就完成了压缩功能。
+                </p>
+                <h2 class="h2-title">提取css到外部,减小app.css体积</h2>
+                <p class="page-p-two-index">
+                    在/src/main.js中，前端框架的CSS引用，都可去除，并改为在/index.html中引用其CDN版本。
+                    <br>
+                    <span style="margin-left: 42px">
+                        1. 去除/src/main.js中的CSS文件import，改为在开发环境下require
+                    </span>
+                <pre v-highlightA>
+    <code >
+        // import 'iview/dist/styles/iview.css
+        if (process.env.NODE_ENV === 'development') {
+            require('mint-ui/lib/style.css')
+        }
+    </code>
+                </pre>
+                <span style="margin-left: 42px">2. 在/index.html中，引入cdn文件</span>
+                <pre v-highlightA>
+    <code >
+        &lt;head&gt;
+            &lt;link href="https://cdn.bootcss.com/iview/2.6.0/styles/iview.css" rel="stylesheet"&gt;
+            &lt;title&gt;app&lt;/title&gt;
+        &lt;/head&gt;
+    </code>
+                </pre>
                 </p>
             </div>
         </div>
