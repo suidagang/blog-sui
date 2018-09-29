@@ -353,9 +353,7 @@
         },
         mounted () {
             //获取列表的数量，计算分页的总数
-//            this.$nextTick(()=>{
-                this.pageTotal = this.$refs.write.children.length;
-//            });
+            this.pageTotal = this.$refs.write.children.length;
             this.showDomPage()
 
         },
