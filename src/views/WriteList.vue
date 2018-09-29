@@ -1,5 +1,5 @@
 <template>
-    <div class="com-box" >
+    <div class="com-min-box" >
         <rain></rain>
         <div class="home-box">
             <el-button class="back-btn" @click="goHome()">主页</el-button>
