@@ -20,6 +20,8 @@ const HtmlIndex = () => import(/* webpackChunkName: "group-html" */ './component
 //js相关文章
 const Js = () => import(/* webpackChunkName: "group-js" */ './components/JS/Js.vue')
 const JsIndex = () => import(/* webpackChunkName: "group-js" */ './components/JS/JsIndex.vue')
+const JsOne = () => import(/* webpackChunkName: "group-js" */ './components/JS/SUBPAGE/JsOne.vue')
+
 //css相关文章
 const Css = () => import(/* webpackChunkName: "group-css" */ './components/CSS/Css.vue')
 const CssIndex = () => import(/* webpackChunkName: "group-css" */ './components/CSS/CssIndex.vue')
@@ -122,6 +124,11 @@ export default new Router({
           name: 'js文章首页',
           component: JsIndex
         },
+        {
+          path:"JsOne",
+          name:"call,aplly,bind",
+          component:JsOne
+        }
       ]
     },
     {
