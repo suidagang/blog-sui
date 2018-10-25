@@ -37,6 +37,10 @@ const MongodbIndex = () => import(/* webpackChunkName: "group-mongodb" */ './com
 //vue插件相关文章
 const VuePlugin = () => import(/* webpackChunkName: "group-vueplugin" */ './components/VUEPLUGIN/VuePlugin.vue')
 const VuePluginIndex = () => import(/* webpackChunkName: "group-vueplugin" */ './components/VUEPLUGIN/VuePluginIndex.vue')
+//gulp webpack相关
+const Gulp = () => import(/* webpackChunkName: "group-gulp" */ './components/GULP/Gulp.vue')
+const GulpIndex = () => import(/* webpackChunkName: "group-gulp" */ './components/GULP/GulpIndex.vue')
+const GulpOne = () => import(/* webpackChunkName: "group-gulp" */ './components/GULP/SUBPAGE/GulpOne.vue')
 
 
 Vue.use(Router)
@@ -76,6 +80,23 @@ export default new Router({
           name: 'vue插件文章首页',
           component: VuePluginIndex
         },
+      ]
+    },
+    {
+      path: '/Gulp',
+      name: 'gulp webpack 项目构建相关',
+      component: Gulp,
+      children: [
+        {
+          path: 'GulpIndex',
+          name: 'ulp webpack 项目构建首页',
+          component: GulpIndex
+        },
+        {
+          path:"GulpOne",
+          name:"gulp 构建多页面项目",
+          component:GulpOne
+        }
       ]
     },
     {

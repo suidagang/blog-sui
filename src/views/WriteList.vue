@@ -55,6 +55,11 @@
                             vue插件
                         </el-card>
                     </el-col>
+                    <el-col :span="4">
+                        <el-card shadow="hover" @click.native="goGulp()">
+                            gulp | webpack
+                        </el-card>
+                    </el-col>
                 </el-row>
             </div>
         </div>
@@ -116,6 +121,9 @@
             },
             goVueplugin(){
                 this.$router.push("/VuePlugin/VuePluginIndex")
+            },
+            goGulp(){
+                this.$router.push("/Gulp/GulpIndex")
             }
         },
         watch: {
