@@ -11,7 +11,7 @@
                 scrollTop: '',
                 goTopShow:false,
                 imgSrc:{
-                    one:'/img/top.png'
+                    one:this.$store.state.baseUrl+'img/top.png'
                 }
             }
         },

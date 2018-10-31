@@ -123,8 +123,8 @@
                 pageDate:"2018/9/18",
                 input:'',
                 imgSrc:{
-                    one:"/img/mao.jpg",
-                    two:'/img/test.jpg'
+                    one:this.$store.state.baseUrl+'img/mao.jpg',
+                    two:this.$store.state.baseUrl+'img/test.jpg'
                 }
             }
         },
@@ -135,7 +135,6 @@
 
         },
         computed: {
-
         },
         components: {
             navHead,

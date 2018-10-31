@@ -32,7 +32,8 @@ Vue.use(VueLazyload, {
   try: 1 // default 1
 });
 
-
+//设置开发环境和线上环境的根目录
+store.commit('updateBaseUrl', {val: process.env.NODE_ENV})
 router.beforeEach((to, from, next) => {
   store.commit('updateLoadingStatus', {isLoading: true})
   NProgress.start(); // 开始进度条

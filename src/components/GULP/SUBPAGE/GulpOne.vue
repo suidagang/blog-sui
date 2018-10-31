@@ -250,7 +250,7 @@
                 pageDate:"2018/10/25",
                 input:'',
                 imgSrc:{
-                    one:"/img/list.png"
+                    one:this.$store.state.baseUrl+"img/list.png"
                 }
             }
         },
