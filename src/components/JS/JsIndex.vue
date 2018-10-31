@@ -23,6 +23,33 @@
                 </div>
                 <el-button type="primary" round class="write-read-all" @click="goPageone()">阅读全文</el-button>
             </div>
+            <div class="every-write-list">
+                <div class="write-cover-box"></div>
+                <div class="write-head-box">
+                    <div class="write-list-head">DOM 事件捕获阶段和目标阶段和冒泡阶段</div>
+                    <div class="write-date">
+                        <span>日期:2018/10/29</span>
+                    </div>
+                </div>
+                <div class="write-list-content">
+                    W3C规范中定义了三个事件阶段,依次是捕获阶段、目标阶段和冒泡阶段。事件对象会依次完成这些阶段。
+                    如果某个阶段不支持或事件对象的传播被终止，那么该阶段就会被跳过。这里先来了解这三个事件阶段的概念:
+                </div>
+                <el-button type="primary" round class="write-read-all" @click="goPagetwo()">阅读全文</el-button>
+            </div>
+            <div class="every-write-list">
+                <div class="write-cover-box"></div>
+                <div class="write-head-box">
+                    <div class="write-list-head">类数组的概念</div>
+                    <div class="write-date">
+                        <span>日期:2018/10/30</span>
+                    </div>
+                </div>
+                <div class="write-list-content">
+                    什么事类数组勒?有哪些是类数组?类数组怎么转成数组?
+                </div>
+                <el-button type="primary" round class="write-read-all" @click="goPagethree()">阅读全文</el-button>
+            </div>
         </div>
         <el-pagination
                 class="com-page"
@@ -71,7 +98,10 @@
                 this.$router.push("/Js/JsOne")
             },
             goPagetwo(){
-                this.$router.push("/vue/VuePageTwo")
+                this.$router.push("/Js/JsTwo")
+            },
+            goPagethree(){
+                this.$router.push("/Js/JsThree")
             },
             home(){
                 this.$router.push("/WriteList")

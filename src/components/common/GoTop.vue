@@ -1,6 +1,6 @@
 <template>
     <div id="goTop">
-        <div class="goTop" v-show="goTopShow" @click="goTop"><i class="goTopIcon"></i></div>
+        <div class="goTop" v-show="goTopShow" @click="goTop"><img v-lazy="imgSrc.one" class="goTopIcon" /></div>
     </div>
 </template>
 <script>
@@ -10,6 +10,9 @@
             return{
                 scrollTop: '',
                 goTopShow:false,
+                imgSrc:{
+                    one:'/img/top.png'
+                }
             }
         },
         methods:{
@@ -60,7 +63,5 @@
         display: block;
         width: 150px;
         height: 150px;
-        background-image: url("./../../assets/img/top.png");
-        background-size: 150px 150px;
     }
 </style>

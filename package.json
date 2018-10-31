@@ -28,6 +28,7 @@
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "vue-cli-plugin-element": "^1.0.0",
+    "vue-lazyload": "^1.2.6",
     "vue-template-compiler": "^2.5.17"
   }
 }

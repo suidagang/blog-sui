@@ -21,6 +21,8 @@ const HtmlIndex = () => import(/* webpackChunkName: "group-html" */ './component
 const Js = () => import(/* webpackChunkName: "group-js" */ './components/JS/Js.vue')
 const JsIndex = () => import(/* webpackChunkName: "group-js" */ './components/JS/JsIndex.vue')
 const JsOne = () => import(/* webpackChunkName: "group-js" */ './components/JS/SUBPAGE/JsOne.vue')
+const JsTwo = () => import(/* webpackChunkName: "group-js" */ './components/JS/SUBPAGE/JsTwo.vue')
+const JsThree = () => import(/* webpackChunkName: "group-js" */ './components/JS/SUBPAGE/JsThree.vue')
 
 //css相关文章
 const Css = () => import(/* webpackChunkName: "group-css" */ './components/CSS/Css.vue')
@@ -41,6 +43,7 @@ const VuePluginIndex = () => import(/* webpackChunkName: "group-vueplugin" */ '.
 const Gulp = () => import(/* webpackChunkName: "group-gulp" */ './components/GULP/Gulp.vue')
 const GulpIndex = () => import(/* webpackChunkName: "group-gulp" */ './components/GULP/GulpIndex.vue')
 const GulpOne = () => import(/* webpackChunkName: "group-gulp" */ './components/GULP/SUBPAGE/GulpOne.vue')
+const GulpTwo = () => import(/* webpackChunkName: "group-gulp" */ './components/GULP/SUBPAGE/GulpTwo.vue')
 
 
 Vue.use(Router)
@@ -96,6 +99,11 @@ export default new Router({
           path:"GulpOne",
           name:"gulp 构建多页面项目",
           component:GulpOne
+        },
+        {
+          path:"GulpTwo",
+          name:"webpack 构建多页面项目",
+          component:GulpTwo
         }
       ]
     },
@@ -149,6 +157,16 @@ export default new Router({
           path:"JsOne",
           name:"call,aplly,bind",
           component:JsOne
+        },
+        {
+          path:"JsTwo",
+          name:"dom 捕获和冒泡事件",
+          component:JsTwo
+        },
+        {
+          path:"JsThree",
+          name:"类数组",
+          component:JsThree
         }
       ]
     },

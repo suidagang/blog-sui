@@ -22,6 +22,15 @@ import Highlight from './assets/utils/hignlight';
 
 Vue.use(Highlight);
 
+//引入图片懒加载
+import VueLazyload from 'vue-lazyload'
+//图片懒加载配置项,使用把:src 换成v-lazy就可以了
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: require('./assets/yu.svg'),
+  loading: require('./assets/yu.svg'),
+  try: 1 // default 1
+});
 
 
 router.beforeEach((to, from, next) => {

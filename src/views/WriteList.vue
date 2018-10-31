@@ -57,7 +57,7 @@
                     </el-col>
                     <el-col :span="4">
                         <el-card shadow="hover" @click.native="goGulp()">
-                            gulp | webpack
+                            构建工具
                         </el-card>
                     </el-col>
                 </el-row>

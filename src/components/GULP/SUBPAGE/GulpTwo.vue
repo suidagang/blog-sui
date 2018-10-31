@@ -8,18 +8,18 @@
             <div class="page-body">
                 <p class="page-p-two-index">
                     现在单页面项目比较流行,但对于简单的项目,例如公司官网等等,如果用单页项目去做的话,不利于SEO,所以
-                    还是需要用到多页面的构建项目,现在流行的构建工具 ,webpack,gulp等等,这里先介绍gulp来实现多页面
+                    还是需要用到多页面的构建项目,现在流行的构建工具 ,webpack,gulp等等,这里介绍webpack来实现多页面
                     的js,css,image,html的压缩,以及less的编译,以及本地起个服务器实现实时刷新等功能,以及生产环境才压
                     缩开发环境不压缩等功能。
                     <br>
                     <a  class="a-url" href="https://github.com/suidagang/gulp-cli-multiple" target="_blank">githup地址</a>
                 </p>
-                <h2 class="h2-title">gulp构建多页面项目的结构</h2>
+                <h2 class="h2-title">webpack构建多页面项目的结构</h2>
                 <p class="page-p-two-index">
                     结构如下:
                 </p>
                 <div class="img-box">
-                    <img  :src="imgSrc.one" />
+                    <img  v-lazy="imgSrc.one" />
                 </div>
                 <p class="page-p-two-index" style="margin-bottom: 0px">
                     src目录下的:
@@ -243,14 +243,14 @@
         name: 'vue',
         data () {
             return {
-                navHeadText:"gulp 构建多页面项目",
+                navHeadText:"webpack 构建多页面项目",
                 twoTitle:"构建工具",
                 twoRouter:"/vue/VueIndex",
-                pageTitle:"gulp 构建多页面项目",
+                pageTitle:"webpack 构建多页面项目",
                 pageDate:"2018/10/25",
                 input:'',
                 imgSrc:{
-                    one:"/img/list.png"
+                    one:'/img/list.png'
                 }
             }
         },
@@ -269,13 +269,13 @@
             breadCrumb,
             pageHead
         },
-        methods:{
+        methods: {
             back () {
                 this.$router.push("/Gulp/GulpIndex")
             },
             home(){
                 this.$router.push("/WriteList")
-            },
+            }
         },
         watch: {
 

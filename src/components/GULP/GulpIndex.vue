@@ -18,6 +18,20 @@
                 </div>
                 <el-button type="primary" round class="write-read-all" @click="goPageone()">阅读全文</el-button>
             </div>
+            <div class="every-write-list">
+                <div class="write-cover-box"></div>
+                <div class="write-head-box">
+                    <div class="write-list-head">webpack 构建多页面项目</div>
+                    <div class="write-date">
+                        <span>日期:2018/10/26</span>
+                    </div>
+                </div>
+                <div class="write-list-content">
+                    解决不能用框架,纯HTML的简单webpack项目工程,实现js,css,image,html的压缩
+                    以及本地起个服务器实现实时刷新等功能，以及less的编译。
+                </div>
+                <el-button type="primary" round class="write-read-all" @click="goPagetwo()">阅读全文</el-button>
+            </div>
         </div>
         <el-pagination
                 class="com-page"
@@ -92,6 +106,9 @@
             },
             goPageone(){
                 this.$router.push("/Gulp/GulpOne")
+            },
+            goPagetwo(){
+                this.$router.push("/Gulp/GulpTwo")
             },
         },
         watch: {
