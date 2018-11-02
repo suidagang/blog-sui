@@ -50,6 +50,19 @@
                 </div>
                 <el-button type="primary" round class="write-read-all" @click="goPagethree()">阅读全文</el-button>
             </div>
+            <div class="every-write-list">
+                <div class="write-cover-box"></div>
+                <div class="write-head-box">
+                    <div class="write-list-head">数组所以的api</div>
+                    <div class="write-date">
+                        <span>日期:2018/11/2</span>
+                    </div>
+                </div>
+                <div class="write-list-content">
+                    javascript数组的全部api详解
+                </div>
+                <el-button type="primary" round class="write-read-all" @click="goPagefour()">阅读全文</el-button>
+            </div>
         </div>
         <el-pagination
                 class="com-page"
@@ -102,6 +115,9 @@
             },
             goPagethree(){
                 this.$router.push("/Js/JsThree")
+            },
+            goPagefour(){
+                this.$router.push("/Js/JsFour")
             },
             home(){
                 this.$router.push("/WriteList")

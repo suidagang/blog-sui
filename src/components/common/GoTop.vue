@@ -53,15 +53,15 @@
 <style scoped>
     .goTop{
         position: fixed;
-        right: 50%;
-        margin-right: -660px;
+        right: 0%;
         bottom: 20px;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+        z-index: 99;
     }
     .goTopIcon{
         display: block;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
     }
 </style>

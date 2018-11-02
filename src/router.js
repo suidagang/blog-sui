@@ -23,6 +23,7 @@ const JsIndex = () => import(/* webpackChunkName: "group-js" */ './components/JS
 const JsOne = () => import(/* webpackChunkName: "group-js" */ './components/JS/SUBPAGE/JsOne.vue')
 const JsTwo = () => import(/* webpackChunkName: "group-js" */ './components/JS/SUBPAGE/JsTwo.vue')
 const JsThree = () => import(/* webpackChunkName: "group-js" */ './components/JS/SUBPAGE/JsThree.vue')
+const JsFour = () => import(/* webpackChunkName: "group-js" */ './components/JS/SUBPAGE/JsFour.vue')
 
 //css相关文章
 const Css = () => import(/* webpackChunkName: "group-css" */ './components/CSS/Css.vue')
@@ -167,6 +168,11 @@ export default new Router({
           path:"JsThree",
           name:"类数组",
           component:JsThree
+        },
+        {
+          path:"JsFour",
+          name:"数组API详解",
+          component:JsFour
         }
       ]
     },

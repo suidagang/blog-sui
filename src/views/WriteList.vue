@@ -73,7 +73,6 @@
         data () {
             return {
 
-
             }
         },
         created () {

@@ -98,9 +98,6 @@
                         <li><span class="blod-font">键盘事件</span>：当用户通过键盘在页面上执行操作时触发，如：keydown、keypress</li>
                     </ul>
                 </p>
-                <div class="img-box">
-                    <img  v-lazy="imgSrc.two" />
-                </div>
             </div>
         </div>
     </div>
@@ -148,7 +145,7 @@
             },
             home(){
                 this.$router.push("/WriteList")
-            },
+            }
         },
         watch: {
 

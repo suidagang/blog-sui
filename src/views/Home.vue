@@ -35,7 +35,7 @@
         },
         mounted () {
             const sm3 = require('sm3');
-            console.log(sm3("123456"));
+//            console.log(sm3("123456"));
             this.startSVG();
         },
         computed: {
