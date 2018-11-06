@@ -39,6 +39,8 @@ router.beforeEach((to, from, next) => {
   NProgress.start(); // 开始进度条
   next();
   NProgress.done();
+  //跳转页面回滚到顶部
+  document.documentElement.scrollTop = 0;
 
 });
 

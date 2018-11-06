@@ -62,7 +62,7 @@
         font-size: 18px;
         margin-bottom: 5px;
         background: #3eb8ff;
-        min-width:120px;
+        min-width:60px;
         height:30px;
         line-height: 30px;
         padding: 0 10px;

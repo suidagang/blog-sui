@@ -100,8 +100,35 @@
                 基于ES6，不会改变自身的方法一共有12个，分别为forEach()、every()、some()、filter()、map()、reduce()、reduceRight()
                 以及ES6新增的方法entries()、find()、findIndex()、keys()、values()。
             </p>
+            <h2 class="h2-title">数组冒泡排序</h2>
+                <pre v-highlightA>
+    <code >
+        var arr=[2,3,5,4,33,12,32,76,5,44,33,23,34];
+        function sortArr(){
+            if(Object.prototype.toString.call(arr).slice(8,-1) === 'Array'){
+                var len = arr.length;
+                //8为arr.length,报错写法
+                //for(var i = 0;i<arr.length;i++){
+                for(var i = 0;i<8;i++){
+                    for(var j = i;j<8;j++){
+                        if(arr[i]>arr[j]){
+                            var tem = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = tem;
+                        }
+                    };
+                };
+                return arr;
+            }else{
+                alert("不是数组");
+            }
+        };
+        sortArr();
+    </code>
+                </pre>
             </div>
         </div>
+
     </div>
 </template>
 

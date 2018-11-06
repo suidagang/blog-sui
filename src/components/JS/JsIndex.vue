@@ -63,6 +63,39 @@
                 </div>
                 <el-button type="primary" round class="write-read-all" @click="goPagefour()">阅读全文</el-button>
             </div>
+            <div class="every-write-list">
+                <div class="write-cover-box"></div>
+                <div class="write-head-box">
+                    <div class="write-list-head">js闭包详解</div>
+                    <div class="write-date">
+                        <span>日期:2018/11/6</span>
+                    </div>
+                </div>
+                <div class="write-list-content">
+                    js闭包的优缺点，以及闭包使用的场景及注意事项。
+                </div>
+                <el-button type="primary" round class="write-read-all" @click="goPagefive()">阅读全文</el-button>
+            </div>
+            <div class="every-write-list">
+                <div class="write-cover-box"></div>
+                <div class="write-head-box">
+                    <div class="write-list-head">js中this关键字详解</div>
+                    <div class="write-date">
+                        <span>日期:2018/11/6</span>
+                    </div>
+                </div>
+                <div class="write-list-content">
+                    我们要记住：this永远指向函数运行时所在的对象！而不是函数被创建时所在的对象,把 this 出现的场景分为四类，简单的说就是：
+                    <p>
+                        1、有对象就指向调用对象。
+                        2、没调用对象就指向全局对象。
+                        3、用new构造就指向新对象
+                        4、通过 apply 或 call 或 bind 来改变 this 的所指。
+                    </p>
+
+                </div>
+                <el-button type="primary" round class="write-read-all" @click="goPagesix()">阅读全文</el-button>
+            </div>
         </div>
         <el-pagination
                 class="com-page"
@@ -76,12 +109,13 @@
 
 <script>
     import goTop from "./../common/GoTop.vue";
-    import navHead from './../common/nav-head.vue'
+    import navHead from './../common/nav-head.vue';
+    import './../../less/pageStyle.less';
     export default {
         name: 'svg-index',
         data () {
             return {
-                navHeadText:"svg相关文章",
+                navHeadText:"JS相关文章",
                 pageTotal:null,
                 currentPage:1
 
@@ -118,6 +152,12 @@
             },
             goPagefour(){
                 this.$router.push("/Js/JsFour")
+            },
+            goPagefive(){
+                this.$router.push("/Js/JsFive")
+            },
+            goPagesix(){
+                this.$router.push("/Js/JsSix")
             },
             home(){
                 this.$router.push("/WriteList")
