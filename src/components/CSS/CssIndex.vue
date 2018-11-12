@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="write-list-content">
-                    CSS学习
+                    css3实现loading加载效果
                 </div>
                 <el-button type="primary" round class="write-read-all" @click="goPageone()">阅读全文</el-button>
             </div>
@@ -63,7 +63,7 @@
                 this.$router.push("/WriteList")
             },
             goPageone(){
-                console.log("跳转路由")
+                this.$router.push("/Css/CssOne")
             },
             home(){
                 this.$router.push("/WriteList")

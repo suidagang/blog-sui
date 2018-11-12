@@ -30,6 +30,7 @@ const JsSix = () => import(/* webpackChunkName: "group-js" */ './components/JS/S
 //css相关文章
 const Css = () => import(/* webpackChunkName: "group-css" */ './components/CSS/Css.vue')
 const CssIndex = () => import(/* webpackChunkName: "group-css" */ './components/CSS/CssIndex.vue')
+const CssOne = () => import(/* webpackChunkName: "group-css" */ './components/CSS/SUBPAGE/CssOne.vue')
 //node相关文章
 const Node = () => import(/* webpackChunkName: "group-node" */ './components/NODE/Node.vue')
 const NodeIndex = () => import(/* webpackChunkName: "group-node" */ './components/NODE/NodeIndex.vue')
@@ -197,6 +198,11 @@ export default new Router({
           path: 'CssIndex',
           name: 'CSS文章首页',
           component: CssIndex
+        },
+        {
+          path: 'CssOne',
+          name: 'CSS loading加载效果',
+          component: CssOne
         },
       ]
     },
