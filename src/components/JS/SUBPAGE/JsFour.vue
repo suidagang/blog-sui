@@ -126,6 +126,48 @@
         sortArr();
     </code>
                 </pre>
+                <h2 class="h2-title">数组去重的三种方法</h2>
+                <h2 class="h3-title">方法一</h2>
+                <pre v-highlightA>
+    <code >
+        //通过对象属性来去重
+        var arr = [1,2,3,4,3,2,4,3,2,0];
+        var obj = {};
+        var arrNew = [];
+        for(var i = 0,len = arr.length; i < len ; i++ ){
+            if(!obj[arr[i]]){
+                obj[arr[i]] = 1;
+                arrNew.push(arr[i])
+            }
+        };
+        console.log(arrNew);//[1,2,3,4,0];
+    </code>
+                </pre>
+                <h2 class="h3-title">方法二</h2>
+                <pre v-highlightA>
+    <code >
+        //通过indexOf来去重,如果要检索的值没有出现，则该方法返回 -1。
+        var arr = [1,2,3,4,3,2,4,3,2,0];
+        var arrNew = [];
+        for(var i = 0 ,len = arr.length;i < len; i++){
+            if(arrNew.indexOf(arr[i])<0){
+                arrNew.push(arr[i])
+            }
+        };
+        console.log(arrNew);//[1,2,3,4,0];
+    </code>
+                </pre>
+                <h2 class="h3-title">方法三</h2>
+                <pre v-highlightA>
+    <code >
+        //通过indexOf来去重,如果要检索的值没有出现，则该方法返回 -1。
+        var arr = [1,2,3,4,3,2,4,3,2,0];
+        var arrNew = arr.filter(function(element,index,self){
+            return self.indexOf(element) === index;
+        });
+        console.log(arrNew);//[1,2,3,4,0];
+    </code>
+                </pre>
             </div>
         </div>
 

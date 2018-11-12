@@ -31,6 +31,7 @@ const JsSix = () => import(/* webpackChunkName: "group-js" */ './components/JS/S
 const Css = () => import(/* webpackChunkName: "group-css" */ './components/CSS/Css.vue')
 const CssIndex = () => import(/* webpackChunkName: "group-css" */ './components/CSS/CssIndex.vue')
 const CssOne = () => import(/* webpackChunkName: "group-css" */ './components/CSS/SUBPAGE/CssOne.vue')
+const CssTwo = () => import(/* webpackChunkName: "group-css" */ './components/CSS/SUBPAGE/CssTwo.vue')
 //node相关文章
 const Node = () => import(/* webpackChunkName: "group-node" */ './components/NODE/Node.vue')
 const NodeIndex = () => import(/* webpackChunkName: "group-node" */ './components/NODE/NodeIndex.vue')
@@ -203,6 +204,11 @@ export default new Router({
           path: 'CssOne',
           name: 'CSS loading加载效果',
           component: CssOne
+        },
+        {
+          path: 'CssTwo',
+          name: 'CSS 竖直居中',
+          component: CssTwo
         },
       ]
     },

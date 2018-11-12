@@ -7,7 +7,7 @@
             <div class="every-write-list">
                 <div class="write-cover-box"></div>
                 <div class="write-head-box">
-                    <div class="write-list-head">CSS开始</div>
+                    <div class="write-list-head">CSS3实现loading效果</div>
                     <div class="write-date">
                         <span>日期:2018/10/10</span>
                     </div>
@@ -16,6 +16,19 @@
                     css3实现loading加载效果
                 </div>
                 <el-button type="primary" round class="write-read-all" @click="goPageone()">阅读全文</el-button>
+            </div>
+            <div class="every-write-list">
+                <div class="write-cover-box"></div>
+                <div class="write-head-box">
+                    <div class="write-list-head">CSS实现垂直居中</div>
+                    <div class="write-date">
+                        <span>日期:2018/11/12</span>
+                    </div>
+                </div>
+                <div class="write-list-content">
+                    css实现竖直居中的方式
+                </div>
+                <el-button type="primary" round class="write-read-all" @click="goPagetwo()">阅读全文</el-button>
             </div>
         </div>
         <el-pagination
@@ -64,6 +77,9 @@
             },
             goPageone(){
                 this.$router.push("/Css/CssOne")
+            },
+            goPagetwo(){
+                this.$router.push("/Css/CssTwo")
             },
             home(){
                 this.$router.push("/WriteList")
