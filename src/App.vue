@@ -9,7 +9,7 @@
 
 
 export default {
-    name: 'app',
+    name: 'app眭刚',
 
     data(){
         return{
