@@ -1,6 +1,7 @@
 <template>
   <div id="app" v-loading="loading2">
       <router-view></router-view>
+
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 
 export default {
     name: 'app',
+
     data(){
         return{
             transitionName:''
@@ -24,7 +26,6 @@ export default {
 
     },
     watch: {
-
     }
 }
 </script>
