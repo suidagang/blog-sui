@@ -3,7 +3,6 @@
 ## Project setup
 ```
 npm install
-测试一下
 ```
 
 ### Compiles and hot-reloads for development
