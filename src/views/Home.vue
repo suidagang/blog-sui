@@ -3,7 +3,7 @@
         <rain></rain>
         <div class="home-box">
             <div class="blog-head">
-                <vue-typer class="nav-text" :repeat='1' erase-style='backspace'   text='眭刚的博客'></vue-typer>
+                <vue-typer class="nav-text" :repeat='1' erase-style='backspace'   text='眭刚的博客(dev)'></vue-typer>
             </div>
             <div class="svg-container" id="boxContainer">
                 <svg id="boxLoader" width="70px" height="70px"  preserveAspectRatio="none">
